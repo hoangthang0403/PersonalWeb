@@ -12,7 +12,7 @@
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-    <script src="profile.js"></script>
+    <script src="Profile/profile.js"></script>
     <style>
         body
         {
@@ -237,7 +237,7 @@
         }
         input[type=submit] 
         {
-            width: 30%;
+            width: 60%;
             background-color: #9F0710;
             color: white;
             padding: 4px 12px;
@@ -247,6 +247,21 @@
             cursor: pointer;
         }
         input[type=submit]:hover 
+        {
+            background-color: #45a049;
+        }
+        input[type=button] 
+        {
+            width: 60%;
+            background-color: #9F0710;
+            color: white;
+            padding: 4px 12px;
+            margin: 8px 0;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        input[type=button]:hover 
         {
             background-color: #45a049;
         }
@@ -286,8 +301,6 @@
     </header>
     <section id = "introduction">
     </section>
-  
-
     <section id = "about-me">
         <h1 data-aos="fade-right" data-aos-duration="1200"> About me</h1>
         <div data-aos="fade-left" data-aos-duration="1400" data-aos-anchor-placement="top-center">
@@ -301,7 +314,7 @@
             </table>
         </div>   
         <div>
-            <a href = "Solution3(CV).html" class="btn btn-outline-dark" role="button" style = "font-weight: bold;font-size:30px;margin-top:5vh;margin-left:70vw;position: absolute;" 
+            <a href = "CV.html" class="btn btn-outline-dark" role="button" style = "font-weight: bold;font-size:30px;margin-top:5vh;margin-left:70vw;position: absolute;" 
             target="_blank" data-aos="fade-left" data-aos-duration="1400"> VIEW MY CV</a>
             <table style = "width:45%;margin-top:40vh;border-left:1px solid; border-bottom:1px solid;" data-aos="fade-right" data-aos-duration="1800" data-aos-anchor-placement="center-bottom">
             <th><br><br><br><br></th>
@@ -366,7 +379,7 @@
             </div>
             <div id = "form">
                 <h1>Leave Contact</h1>
-                <form onsubmit ="return myFunction()">
+                <form method="post">
                     <label for="name">Name</label>
                     <input type="text" id="name" name="name">
                     <br>
@@ -376,7 +389,10 @@
                     <label for="phone">Phone Number</label>
                     <input type="text" id="phone" name="phone">
                     <br>
-                    <input type="submit" value="Submit">
+                    <input type="submit" value="Submit" onclick = "myFunction()">
+                    <br>
+                    <input type="button" value="Show submit information" onclick = "location.href='ajax.html'">
+                    
                 </form>
              </div>
 
@@ -384,9 +400,9 @@
         <div id = "social-media"> 
             <h2 style = "font-size: 40px; text-decoration: none;"> MY SOCIAL MEDIA </h2>
             <div class = "icon">
-            <a class = "icon" href ="https://www.facebook.com/Paolo.0403/" target = "_blank"> <img class = "social-media"src = "fb-xmas.jpg" style = "left:42.4vw;"> </a>
-            <a class = "icon" href ="https://www.instagram.com/hoangthang0403/" target = "_blank" > <img class = "social-media"src = "insta-xmas.jpg" style = "left:47.4vw;"> </a>
-            <a class = "icon" href ="https://open.spotify.com/user/212hxko3ascgtwsg73alpv7dq?si=0925dcb18a984422" target = "_blank"> <img class = "social-media"src = "spotify-xmas.jpg" style = "left:52.6vw;"> </a> 
+            <a class = "icon" href ="https://www.facebook.com/Paolo.0403/" target = "_blank"> <img class = "social-media"src = "fb-xmas.jpg" > </a>
+            <a class = "icon" href ="https://www.instagram.com/hoangthang0403/" target = "_blank" > <img class = "social-media"src = "insta-xmas.jpg"> </a>
+            <a class = "icon" href ="https://open.spotify.com/user/212hxko3ascgtwsg73alpv7dq?si=0925dcb18a984422" target = "_blank"> <img class = "social-media"src = "spotify-xmas.jpg"> </a> 
             </div>
         </div> 
     </section>
@@ -397,7 +413,6 @@
 <?php
     extract($_REQUEST);
     $file=fopen("information.txt","a");
-
     fwrite($file,"Name: ");
     fwrite($file, $name ."\n");
     fwrite($file,"Email: ");
@@ -405,6 +420,6 @@
     fwrite($file,"Phone Number: ");
     fwrite($file, $phone ."\n");
     fclose($file);
-    header("location: Web.html");
+    header("location: index.php");
  ?>
 </html>

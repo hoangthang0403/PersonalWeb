@@ -47,13 +47,4 @@ $(document).ready(function(){
           alert("Thanks for submitting!!!\nYour name: " + name + "\nEmail: " + mail + "\nPhone Number: " + phone);
       }   
   }
-  var http = new XMLHttpRequest();
-  http.open('GET','information.txt',true);
-  http.send();
-  http.onreadystatechange == function()
-  {
-    if(this.readyState == 4)
-    {
-      document.write(this.responseText);
-    }
-  }
+
