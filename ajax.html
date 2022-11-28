@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <style>
+            body
+            {
+                font-size: 20px;
+            }
+            #submit 
+            {
+                padding: 30px;
+            }
+        </style>
+    </head>
+<body>
+
+<div id="submit">
+<button type="button"  class="btn btn-success" onclick="loadDoc()">Show submit information</button>
+</div>
+<div id = "submit">
+    <button class="btn btn-success" onclick ="location.href='http://hoangthang0403.gq/'" type="button"> Back to home page </button>
+</div>
+
+<script>
+function loadDoc() {
+  const xhttp = new XMLHttpRequest();
+  xhttp.onload = function() {
+    document.getElementById("submit").innerHTML =
+    this.responseText;
+  }
+  xhttp.open("GET", "information.txt");
+  xhttp.send();
+}
+</script>
+
+</body>
+</html>

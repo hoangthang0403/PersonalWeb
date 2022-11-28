@@ -1,0 +1,81 @@
+@import url(font.css);
+@import url(bootstrap.css);
+body
+{
+    font-size: 32px;
+    font-family: 'Kanit';
+    margin:0%;
+    height:200vh;
+    
+}
+h1
+{
+    color:#9F0710;
+    font-size:70px;
+    margin: 0;
+    padding-top:14vh;
+    padding-bottom:0vh;
+    font-weight: bolder;
+    text-decoration-line:underline;
+}
+h2
+{
+    color:#9F0710;
+    font-size:50px;
+    margin: 0;
+    padding-top:10vh;
+    padding-left:1vh;
+    font-weight: bolder;
+}
+h3
+{
+    color:#03878C;
+    font-size:50px;
+    margin: 0;
+    padding-top:4vh;
+    font-weight: lighter;
+    padding-bottom:7vh;
+}
+#introduction
+{
+    background-color:aquamarine;
+    height:100vh;
+}
+#about-me
+{
+    height:100vh;
+    padding-left:20px;
+    font-size: 25px;
+}
+#skills
+{
+    background-color:#1e2b33;
+    height:100vh;
+    font-size: 25px;
+    padding-left:20px;
+
+}
+table
+{
+    border-collapse: collapse;
+    border-color:black;
+}
+th
+{
+    width:400px;
+    text-align: left;
+}
+th:nth-child(even){color:rgb(73, 73, 73);}
+td:nth-child(even){color:rgb(73, 73, 73);} 
+.flex-container 
+{
+    display: flex;
+
+}
+
+.flex-container > div 
+{
+    margin: 30px;
+    padding:30px;
+    
+}
